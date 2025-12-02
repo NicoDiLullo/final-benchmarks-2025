@@ -1,0 +1,16 @@
+(define (choose a b)
+  (if (< a b) a b))
+
+(define (main)
+  (let ((x 10))
+    (let ((y 20))
+      (let ((z (- y x)))
+        (let ((u (+ x z)))
+          (let ((v (- u z)))
+            (if (= v x)
+                (if (< z u)
+                    (choose u v)
+                    (choose v u))
+                0)))))))
+
+(print (main))
