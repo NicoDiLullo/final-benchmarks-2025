@@ -1,5 +1,5 @@
 (define (check x)
-    (< check 10))
+    (< x 10))
 (define (f x)
     (if (check x)
         0
