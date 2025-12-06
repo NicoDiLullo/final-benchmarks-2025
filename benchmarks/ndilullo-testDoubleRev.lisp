@@ -1,11 +1,11 @@
-(define (reverse_helper lst acc)
-    (if (pair? lst)
-        (reverse_helper (right lst) (pair (left lst) acc))
-        acc))
+(define (reversehelper lst acc)
+  (if (pair? lst)
+      (reversehelper (right lst) (pair (left lst) acc))
+      acc))
 
 (define (reverse lst)
-    (reverse_helper lst ()))
+  (reversehelper lst ()))
 
 (do
     (let ((alist (pair 42 (pair 1 (pair 2 ())))))
-        (print (left (reverse (reverse alist))))))
+      (print (left (reverse (reverse alist))))))
